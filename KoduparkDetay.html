@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oyun Detayı</title>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f3fc; /* pastel lila */
+            color: #444;
+        }
+
+        /* NAVBAR (ANA SAYFAYA UYUMLU) */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 50px;
+            background: #ffffffaa;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav .logo {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #444;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #444;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: #5a73ff;
+        }
+
+        /* Detay kart */
+        .detail-card {
+            max-width: 900px;
+            background: #fff;
+            margin: 60px auto;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            animation: fadeIn 0.6s ease;
+        }
+
+        .detail-image img {
+            width: 320px;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .detail-info h1 {
+            margin: 0;
+            font-size: 2.4rem;
+            color: #5a73ff; /* pastel mavi */
+        }
+
+        .detail-info p {
+            margin-top: 15px;
+            line-height: 1.6;
+            font-size: 1.05rem;
+            color: #666;
+        }
+
+        .detail-info ul {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+        .detail-info ul li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .play-btn {
+            display: inline-block;
+            padding: 12px 28px;
+            margin-top: 25px;
+            background: #87b8ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        .play-btn:hover {
+            background: #6ea5ff;
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        @media(max-width: 768px) {
+            .detail-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .detail-image img {
+                width: 80%;
+            }
+            nav {
+                padding: 15px 20px;
+            }
+            nav ul {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR (ANA SAYFANIN AYNISI) -->
+<nav>
+    <div class="logo">Buse Yılmaz</div>
+
+    <ul>
+        <li><a href="index.html">Hakkımda</a></li>
+        <li><a href="index.html">Oyunlarım</a></li>
+        <li><a href="index.html">Projelerim</a></li>
+        <li><a href="index.html">Yazılarım</a></li>
+    </ul>
+</nav>
+
+
+<!-- DETAY KARTI -->
+<div class="detail-card">
+    
+    <div class="detail-image">
+        <img src="img/games.png" alt="Oyun Görseli">
+    </div>
+
+    <div class="detail-info">
+        <h1>KODUPARK</h1>
+        <p>
+            KoduPark, 4-8 yaş için tasarlanmış interaktif bir öğrenme platformudur. 
+            Renkli ve eğlenceli oyunla kodlamayı adım adım öğrenebilirsiniz.
+            Çocukların mantık, problem çözme ve dikkat becerilerini geliştirir.
+        </p>
+
+        <ul>
+            <li>Basit,eğlenceli ve renkli arayüz</li>
+            <li>Adım adım öğrenme modülleri</li>
+            <li>Oyunlaştırılmış görevler </li>
+            <li>Küçük yaş grubuna uygun içerik</li>
+        </ul>
+
+        <a href="#" class="play-btn">Oyun Videosunu İzle</a>
+    </div>
+</div>
+
+</body>
+</html>
+
