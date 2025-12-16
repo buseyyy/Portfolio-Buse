@@ -187,24 +187,3 @@ footer{padding:28px 0 60px;color:var(--muted);font-size:14px;text-align:center;}
 @media(max-width:900px){
   .detail-container{flex-direction:column;}
 }
-
-/* 768px altı cihazlarda menu göster, navlinks gizle */
-@media screen and (max-width: 768px) {
-  .menu {
-    display: block;
-    font-size: 28px;
-    cursor: pointer;
-  }
-
-  .navlinks {
-    display: none; /* Başlangıçta gizli */
-    flex-direction: column; /* Menü açılınca alt alta */
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .navlinks.active {
-    display: flex; /* Menü açıkken göster */
-  }
-}
-
