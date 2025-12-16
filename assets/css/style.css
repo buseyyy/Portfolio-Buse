@@ -37,7 +37,7 @@ nav{
 .navlinks{display:flex;gap:18px;align-items:center}
 .navlinks a{color:var(--muted);text-decoration:none;font-weight:600;padding:10px 12px;border-radius:10px;transition:all .18s}
 .navlinks a:hover{background:var(--glass);color:#222;transform:translateY(-2px)}
-.hamburger{display:none;border:0;background:transparent}
+.menu{display:none;border:0;background:transparent}
 
 
 /* HERO */
@@ -152,4 +152,24 @@ footer{padding:28px 0 60px;color:var(--muted);font-size:14px}
   .hamburger{display:block}
   .grid{grid-template-columns:1fr}
   h1{font-size:28px}
+}
+
+/* 768px altı cihazlarda menu göster, navlinks gizle */
+@media screen and (max-width: 768px) {
+  .menu {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .navlinks {
+    display: none; /* Başlangıçta gizli */
+    flex-direction: column; /* Menü açılınca alt alta */
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .navlinks.active {
+    display: flex; /* Menü açıkken göster */
+  }
 }
